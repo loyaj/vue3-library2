@@ -20,6 +20,7 @@
     "isolatedModules": true,
     "useDefineForClassFields": true,
     "resolveJsonModule": true,
+    "types": ["vue"],
     "plugins": [
       {
         "name": "@vue/language-core"
