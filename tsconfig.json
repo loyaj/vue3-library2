@@ -19,7 +19,12 @@
     "lib": ["esnext", "dom"],
     "isolatedModules": true,
     "useDefineForClassFields": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "name": "@vue/language-core"
+      }
+    ]
   },
   "include": [
     "src/**/*.js",
