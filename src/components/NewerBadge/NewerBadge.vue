@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {ref, toRef } from "vue";
 import { useInternalValue } from "@/composables/internalValue.js";
 
