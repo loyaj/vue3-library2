@@ -2,12 +2,26 @@
   "name": "vue3-library",
   "version": "0.1.0",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./package.json": "./package.json",
     "./style.css": "./dist/style.css",
-    "./dist/*": "./dist/*",
-    "./notify": "./dist/services/notify.js",
-    "./*": "./dist/components/*.js"
+    "./dist/*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*"
+    },
+    "./notify": {
+      "types": "./dist/services/notify.d.ts",
+      "default": "./dist/services/notify.js"
+    },
+    "./*": {
+      "types": "./dist/components/*.d.ts",
+      "default": "./dist/components/*.js"
+    }
   },
   "files": [
     "dist"
@@ -20,7 +34,8 @@
     "@vitejs/plugin-vue": "^4.6.2",
     "glob": "^10.4.5",
     "vite": "^4.5.3",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vite-plugin-dts": "^4.3.0"
   },
   "peerDependencies": {
     "vue": ">=3.5 <3.6"

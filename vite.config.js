@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -19,6 +20,13 @@ const componentEntries = Object.fromEntries(
 export default defineConfig({
   plugins: [
     vue(),
+    dts({
+      insertTypesEntry: true,
+      outputDir: "dist",
+      staticImport: true,
+      skipDiagnostics: true,
+      tsconfigPath: "./tsconfig.json"
+    }),
   ],
   build: {
     lib: {
