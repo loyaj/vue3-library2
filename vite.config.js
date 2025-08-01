@@ -24,8 +24,11 @@ export default defineConfig({
       insertTypesEntry: true,
       outputDir: "dist",
       staticImport: true,
-      skipDiagnostics: true,
-      tsconfigPath: "./tsconfig.json"
+      skipDiagnostics: false,
+      tsconfigPath: "./tsconfig.json",
+      rollupTypes: true,
+      include: ["src/**/*.vue", "src/**/*.js", "lib/**/*.js"],
+      exclude: ["node_modules", "dist", "**/*.test.*", "**/*.spec.*"]
     }),
   ],
   build: {

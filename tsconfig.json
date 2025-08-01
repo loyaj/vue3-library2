@@ -14,7 +14,12 @@
     "moduleResolution": "node",
     "strict": true,
     "target": "esnext",
-    "module": "esnext"
+    "module": "esnext",
+    "jsx": "preserve",
+    "lib": ["esnext", "dom"],
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*.js",
