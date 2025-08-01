@@ -1,0 +1,11 @@
+*:has(.maximize-height),
+.maximize-height {
+  height: 100%;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+.flex-grow {
+  flex-grow: 1;
+}
